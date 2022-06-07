@@ -13,7 +13,7 @@ export class User {
   @Column({ name: 'nm_user' })
   username?: string;
 
-  @Column({ name: ' ds_password' })
+  @Column({ name: 'ds_password' })
   password?: string;
 
   @Column({ name: 'nr_phone' })
