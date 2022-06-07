@@ -11,12 +11,8 @@ import { AppController } from './app.controller';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: '127.0.0.1',
-      port: 3306,
-      username: 'root',
-      password: 'Joao1404',
-      database: 'mydb',
+      type: 'postgres',
+      url: process.env.DATABASE_URL,
       entities: [User],
       synchronize: false, //dont use in production
     }),

@@ -5,7 +5,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-@Entity({ name: `t_sw_user` })
+@Entity({ schema: "public", name: `t_sw_user` })
 export class User {
   @PrimaryGeneratedColumn({ name: 'id_user' })
   userId?: number;
@@ -13,7 +13,7 @@ export class User {
   @Column({ name: 'nm_user' })
   username?: string;
 
-  @Column({ name: 'ds_password' })
+  @Column({ name: ' ds_password' })
   password?: string;
 
   @Column({ name: 'nr_phone' })
