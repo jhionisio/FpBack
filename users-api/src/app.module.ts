@@ -15,6 +15,9 @@ import { AppController } from './app.controller';
       url: process.env.DATABASE_URL,
       entities: [User],
       synchronize: false, //dont use in production
+      ssl: {
+        rejectUnauthorized: false
+      }
     }),
     UserModule,
     AuthModule,
